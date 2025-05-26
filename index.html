@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pola Angka</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1 class="main-title"><i class="fa-solid fa-arrow-up-1-9"></i>Pola Angka</h1>
+    <div class="card">
+        <p>Masukkan angka dari 1 hingga 9 untuk melihat pola angka yang dihasilkan.</p>
+        <h3>Contoh:</h3> 
+            <div class="example-box">
+                Jika Anda memasukkan angka 3, pola yang dihasilkan akan seperti berikut:<br>
+                1<br>
+                2 2<br>
+                3 3 3
+            </div>
+        <div class="form-group">
+            <div class="input-mode">
+                <label>
+                    <input type="radio" name="mode" value="ketik" checked onchange="setInputMode('ketik')"> Ketik Angka
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="pilih" onchange="setInputMode('pilih')"> Pilih Angka
+                </label>
+            </div>
+            <label for="inputNumber">Input Angka: </label>
+            <input type="number" id="inputNumber" placeholder="Masukkan Angka 1-9" min="1" max="9">
+                <div class="number-buttons" id="numberButtons" style="display:none;">
+                    <button type="button" onclick="setInputNumber(1)">1</button>
+                    <button type="button" onclick="setInputNumber(2)">2</button>
+                    <button type="button" onclick="setInputNumber(3)">3</button>
+                    <button type="button" onclick="setInputNumber(4)">4</button>
+                    <button type="button" onclick="setInputNumber(5)">5</button>
+                    <button type="button" onclick="setInputNumber(6)">6</button>
+                    <button type="button" onclick="setInputNumber(7)">7</button>
+                    <button type="button" onclick="setInputNumber(8)">8</button>
+                    <button type="button" onclick="setInputNumber(9)">9</button>
+                </div>
+            <div class="button-row">
+                <button onclick="clearOutput()">Hapus</button>
+                <button onclick="generatePattern()">Tampilkan</button>
+            </div>
+            <label for="outputText">Hasil Pola:</label>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
