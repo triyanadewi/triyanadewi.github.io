@@ -50,3 +50,9 @@ function clearOutput() {
     document.getElementById('inputNumber').value = '';
     document.getElementById('output').textContent = '';
 }
+
+document.getElementById('inputNumber').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        generatePattern();
+    }
+});
