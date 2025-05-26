@@ -49,9 +49,9 @@ Kunjungi langsung aplikasinya di:
 
 ## 🛠 Teknologi yang Digunakan
 
-- ✅ HTML5  
-- ✅ CSS3  
-- ✅ JavaScript (Vanilla)
+- ✅ HTML
+- ✅ CSS  
+- ✅ JavaScript
 
 ---
 
