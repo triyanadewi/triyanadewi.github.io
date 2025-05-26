@@ -206,15 +206,36 @@ button:hover {
 
 .custom-alert {
     position: fixed;
-    top: 10px;
+    top: 16px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--green);
     color: var(--light-bg);
-    padding: 14px 32px;
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
     z-index: 9999;
-    font-size: 1.1em;
+    font-size: 1.15em;
     animation: fadeInOut 2s;
+    max-width: 95vw;
+    width: 90vw;
+    text-align: center;
+    word-break: break-word;
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
+@media (max-width: 480px) {
+    .custom-alert {
+        font-size: 1em;
+        padding: 14px 10px;
+        top: 10px;
+        border-radius: 10px;
+    }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-20px);}
+    10% { opacity: 1; transform: translateX(-50%) translateY(0);}
+    90% { opacity: 1; transform: translateX(-50%) translateY(0);}
+    100% { opacity: 0; transform: translateX(-50%) translateY(-20px);}
 }
